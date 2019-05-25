@@ -1,0 +1,117 @@
+html {
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  min-height: 100%;
+}
+
+.content {
+  flex: 1;
+}
+
+.sidebar {
+  width: 80px;
+  background-color: #25272E;
+}
+
+.sidebar__logo::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  display: block;
+  background-color: #1D2028;
+  border-bottom: 1px solid #31343C;
+}
+
+.header {
+  height: 82px;
+  border-bottom: 1px solid #EEEEEE;
+  padding: 16px 22px;
+  color: #626262;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__title {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 36px;
+}
+
+.header__parrots-count {
+  display: flex;
+}
+
+.header__parrots-count::before {
+  content: url('images/light-parrot.svg');
+  align-self: center;
+  margin-right: 10px;
+}
+
+#messages{
+  position: absolute;
+  overflow: auto;
+  width: 100%;
+  height: 75%;
+}
+
+.text_box{
+  position: absolute;
+  left: 80px;
+  right: 0%;
+  height: 100px;
+  top: 85.71%;
+  bottom: 0%;
+  
+  background: #EFEFEF;
+  }
+
+  .send_icon{
+    position: absolute;
+    width: 32px;
+    height:30px ;
+    left: 716px ;
+    right: 104px ;
+    top: 34px;
+    bottom: 517px;
+      }
+
+   .input_text{
+    position: absolute;
+    width: 514px;
+    height: 52px;
+    left: 180px ;
+    right: 80px;
+    top: 24px;
+    bottom:517px ;
+        
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 6px;
+      }
+
+  .imgContainer{
+    padding: 20px;
+  }
+
+  .img_avatar{
+    width: 34px;
+    height: 34px;
+    border-radius:10px;
+    border: 1px solid #979797;
+  }
+
+  .colorfulParrot{
+    width: 34px;
+    height: 34px;
+    background: url(images/parrot.gif) no-repeat;
+
+  }
+
+  .greyParrot{
+    width: 34px;
+    height: 34px;
+    background: url('images/light-parrot.svg');
+  }
