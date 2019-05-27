@@ -58,6 +58,20 @@ html {
   height: 75%;
 }
 
+#userImg{
+  width: 52px;
+  height: 52px;
+  border-radius:10px;
+  border: 1px solid #979797;
+  margin-top:24px;
+  margin-left:24px;
+}
+
+.div_message{
+  display: flex;
+  flex: row;
+}
+
 .text_box{
   position: absolute;
   left: 80px;
@@ -65,7 +79,6 @@ html {
   height: 100px;
   top: 85.71%;
   bottom: 0%;
-  
   background: #EFEFEF;
   }
 
@@ -79,6 +92,7 @@ html {
     bottom: 517px;
       }
 
+
    .input_text{
     position: absolute;
     width: 514px;
@@ -87,13 +101,24 @@ html {
     right: 80px;
     top: 24px;
     bottom:517px ;
-        
+    border: 0;
     background: rgba(255, 255, 255, 0.5);
-    border-radius: 6px;
+
       }
 
-  .imgContainer{
+  .coluna_img{
     padding: 20px;
+  }
+
+  .coluna_dados{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cabecalho{
+    display: flex;
+    flex-direction: row;
+    margin-top: 16px;
   }
 
   .img_avatar{
@@ -102,16 +127,29 @@ html {
     border-radius:10px;
     border: 1px solid #979797;
   }
+ .parrot {
+    margin-left: 9px;
+    max-width: 26px;
+    max-height: 21px;
+ }
 
-  .colorfulParrot{
-    width: 34px;
-    height: 34px;
-    background: url(images/parrot.gif) no-repeat;
+ .hora{
+    margin-left: 9px;
+    font-family: Lato;
+    color: #D1D1D1;
+ }
 
-  }
+ .conteudo{
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  /* or 150% */
+  
+  
+  color: #494949;
+ }
 
-  .greyParrot{
-    width: 34px;
-    height: 34px;
-    background: url('images/light-parrot.svg');
-  }
+
+

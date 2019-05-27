@@ -17,12 +17,27 @@
   const generateMessage = message => {
     const author = message.author;
     return `
-      <div>
-      <div class="img_container">
-       <img class="img_avatar" src="${author.avatar}"/> 
-      </div>
-      <img class="parrot ${(message.has_parrot ? "colorfulParrot" : "greyParrot")}" id="${message.id}"/>
-        ${author.name} -${formatTime(message.created_at)}- ${message.content}
+			<div class="div_message">
+				<div class="coluna_img">
+			 		<img class="img_avatar" src="${author.avatar}"/> 
+				</div>
+
+				<div class="coluna_dados">
+					<div class="cabecalho">
+				  	<div class="author_name">
+				    	${author.name} 
+						</div>
+
+						<div class="hora">
+						 ${formatTime(message.created_at)}
+						</div> 	
+
+				 	 <img class="parrot ${(message.has_parrot ? "colorfulParrot" : "greyParrot")}" id="${message.id}" src="${message.has_parrot ? "./images/parrot.gif" : "./images/light-parrot.svg"}"/>
+					 </div>
+					 <div class="conteudo">
+							 ${message.content}
+				 	 </div>
+				</div>
       </div>
     `;
   }
@@ -47,10 +62,13 @@
 
             if(parrotElement.classList.contains("greyParrot")){
               parrotMessage(parrotElement.id);
-              parrotElement.className = "colorfulParrot"; 
+							parrotElement.className = "parrot colorfulParrot"; 
+							parrotElement.src = "./images/parrot.gif";
+
             } else {
               unparrotMessage(parrotElement.id);
-              parrotElement.className = "greyParrot"; 
+							parrotElement.className = "parrot greyParrot"; 
+							parrotElement.src = "./images/light-parrot.svg";
             }
           }
         )
@@ -115,8 +133,8 @@
   }
 
   function initialize() {
-    fetchParrotsCount();
-    setInterval(listMessages, 6000);
+		fetchParrotsCount();
+    setInterval(listMessages, 3000);
     getMe();
 
     document.querySelector(".send_icon").onclick = () => {
