@@ -62,13 +62,13 @@
 
             if(parrotElement.classList.contains("greyParrot")){
               parrotMessage(parrotElement.id);
-							parrotElement.className = "parrot colorfulParrot"; 
-							parrotElement.src = "./images/parrot.gif";
+			   parrotElement.className = "parrot colorfulParrot"; 
+			   parrotElement.src = "./images/parrot.gif";
 
             } else {
               unparrotMessage(parrotElement.id);
-							parrotElement.className = "parrot greyParrot"; 
-							parrotElement.src = "./images/light-parrot.svg";
+			   parrotElement.className = "parrot greyParrot"; 
+			   parrotElement.src = "./images/light-parrot.svg";
             }
           }
         )
